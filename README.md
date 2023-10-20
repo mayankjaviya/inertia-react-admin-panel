@@ -34,7 +34,7 @@ Whether you're a seasoned developer looking to streamline your workflow or a new
 
 ```bash
 # Clone the repository
-git clone https://github.com/Mynk001/inertia-react-scaffold.git
+git clone https://github.com/Mayank-Javiya/inertia-react-scaffold.git
 
 # Change into the project directory
 cd your-project
