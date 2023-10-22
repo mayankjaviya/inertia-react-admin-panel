@@ -3,49 +3,18 @@ import React from "react";
 
 export default function Navbar(props) {
 
-   const { path } = usePage().props;
-    return (
-       <>
-         <h1 className="visually-hidden">Sidebars examples</h1>
-        <div
-          className="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark"
-          style={{ width: 280 }}
-        >
-          <a
-            href="/"
-            className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
-          >
-            <svg className="bi me-2" width={40} height={32}>
-
-            </svg>
-            <span className="fs-4">Admin Panel</span>
-          </a>
-          <hr />
-          <ul className="nav nav-pills flex-column mb-auto text-light">
-            <li className="nav-item my-2">
-              <Link href="/dashboard" className={`nav-link text-light ${window.location.pathname === '/dashboard' ? 'active' : ''}`} aria-current="page">
-                Dashboard
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link href="/categories" className={`nav-link text-light ${window.location.pathname === '/categories' ? 'active' : ''}`} aria-current="page">
-                Categories
-              </Link>
-            </li>
-
-          </ul>
-          <hr />
-          <div className="">
-            <a
-              href="#"
-              className="d-flex align-items-center text-white text-decoration-none"
-            >
-              <Link href="/logout" method="post" className="text-light" type="button">Logout</Link>
-            </a>
-          </div>
-        </div>
-      <div className="b-example-divider" style={{  width: 0 }}></div>
-       </>
-    );
+   const { auth } = usePage().props;
+   return (
+       <nav className="navbar navbar-expand-lg navbar-light bg-light py-3 sticky-top">
+           <div className="container d-flex justify-content-end">
+               <img
+                   src="https://cdn.icon-icons.com/icons2/2468/PNG/512/user_icon_149329.png"
+                   height="25"
+                   alt=""
+               />
+               <h5 className="mb-0 ms-2">{auth.name}</h5>
+           </div>
+       </nav>
+   );
 
 }

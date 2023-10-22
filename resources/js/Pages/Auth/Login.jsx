@@ -6,7 +6,6 @@ export default function Login(props) {
         email: "",
         password: "",
     });
-    console.log(errors);
 
     const submitLogin = (e) => {
         e.preventDefault();

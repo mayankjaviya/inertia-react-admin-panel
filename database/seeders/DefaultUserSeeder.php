@@ -19,12 +19,5 @@ class DefaultUserSeeder extends Seeder
         $user->password = Hash::make('12345678');
         $user->role_id = 1;
         $user->save();
-
-        $user = new \App\Models\User();
-        $user->name = 'Company';
-        $user->email = 'company@inertia.com';
-        $user->password = Hash::make('12345678');
-        $user->role_id = 2;
-        $user->save();
     }
 }

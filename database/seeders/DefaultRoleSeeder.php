@@ -13,20 +13,12 @@ class DefaultRoleSeeder extends Seeder
      */
     public function run(): void
     {
-        $roles = [
-            [
+        $role = [
                 'name' => 'admin',
                 'display_name' => 'Administrator',
-            ],
-            [
-                'name' => 'company',
-                'display_name' => 'Company',
-            ],
-        ];
+            ];
 
-        foreach ($roles as $role) {
-            $role = Role::firstOrCreate($role);
-            $role->save();
-        }
+        $role = Role::firstOrCreate($role);
+        $role->save();
     }
 }
